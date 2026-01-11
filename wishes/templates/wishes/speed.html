@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>⚡ Speed Mode ⚡</h1>
+      <button onclick="speedMode()">ACTIVATE</button>
+      <a href="/home/">Back</a>
+    </div>
+    <img
+      src="{% static 'images/speed_excited.gif' %}"
+      class="gif"
+      alt="Speed is excited for you."
+    />
+    <button onclick="speedRage()">DON'T PRESS 😭</button>
+    <footer>
+      <p style="opacity: 0.7; font-size: 14px">
+        Built with care. Not copy-pasted😒
+      </p>
+    </footer>
+    <script src="{% static 'js/speed.js' %}"></script>
+  </body>
+</html>

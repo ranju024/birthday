@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: birthday-site
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn birthday.wsgi:application"

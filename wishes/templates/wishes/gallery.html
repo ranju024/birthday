@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Memories 📸</h1>
+      <div class="grid">
+        <img src="{% static 'images/aasish1.jpg' %}" alt="sish1" />
+        <img src="{% static 'images/fucche.jpg' %}" alt="sish2" />
+        <img src="{% static 'images/huh.gif' %}" alt="huh" />
+      </div>
+    </div>
+    <a href="/home/">Back</a>
+  </body>
+</html>

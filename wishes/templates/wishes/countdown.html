@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counting...</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="container fade-in">
+      <h1>Something special is coming... 🎁</h1>
+      <h2 id="countdown">Loading... ⏳</h2>
+    </div>
+
+    <button id="music-btn" class="music-btn">🔊 Play Music</button>
+    <audio id="bg-music" loop>
+      <source src="{% static 'music/bday_tune.mp3' %}" type="audio/mpeg" />
+    </audio>
+    <h2 id="countdown">Loading countdown… ⏳</h2>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
