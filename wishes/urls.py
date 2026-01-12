@@ -9,4 +9,5 @@ urlpatterns = [
     path("message/", views.message, name="message"),
     path("why-you/", views.why, name="why"),
     path("gallery/", views.gallery, name="gallery"),
+    path("memories/", views.memories, name="memories"),
 ]

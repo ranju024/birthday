@@ -13,16 +13,17 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
+    <canvas id="fireworks">fireworks canvas</canvas>
     <div class="container">
       <div class="fade-in">
         <h1 class="glow">Happy Birthday, Bandari🐐</h1>
-      </div>
-      <p>Messi magic ⚽ • Speed energy ⚡ • Pookie vibes 💙</p>
+      </div><div>
       <a href="{% url 'messi' %}" class="btn">Messi Mode</a>
       <a href="{% url 'speed' %}" class="btn">Speed Mode</a>
       <a href="{% url 'message' %}" class="btn">Real Message</a>
       <a href="{% url 'gallery' %}" class="btn">Khudko dekhna chahoge kya😁</a>
     </div>
+
     <button id="music-btn" class="music-btn">🔊 Play Music</button>
 
     <audio id="bg-music" loop>
@@ -32,7 +33,16 @@
       <p style="opacity: 0.7; font-size: 14px">
         Built with care. Not copy-pasted😒
       </p>
+      <button class="fun-btn" onclick="fireConfetti()">
+        🎉 Celebrate Againn 🎉
+      </button>
     </footer>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      window.onload = () => {
+        fireConfetti();
+      };
+    </script>
   </body>
 </html>

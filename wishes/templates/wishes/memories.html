@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memos with You</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <h1 class="title">Our Memories</h1>
+    <div class="timeline">
+      <div class="memory reveal">
+        <img src="{% static 'images/aasish1.jpg' %}" alt="aasish1" />
+        <p>😂 The day everything started</p>
+      </div>
+      <div class="memory reveal">
+        <img src="{% static 'images/messi1.gif' %}" alt="messi11" />
+        <p>🐐 Messi nights and Endless debates</p>
+      </div>
+      <div class="memory reveal">
+        <img src="{% static 'images/speed_excited.gif' %}" alt="speedo" />
+        <p>⚡ iShowSpeed energy moments</p>
+      </div>
+      <div class="memory reveal">
+        <p class="text-only">
+          💌 No matter what happens, you matter more than you know. Dilke taar
+          jude huwe hae tumse.
+        </p>
+      </div>
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

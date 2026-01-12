@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Redirect after 5 seconds
             setTimeout(() => {
                 window.location.href = "/home/";
-            }, 5000);
+            }, 7000);
             return;
         }
 
@@ -76,3 +76,46 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 });
+
+function fireConfetti() {
+    confetti({
+        particleCount: 400,
+        spread: 120,
+        origin: { y: 0.6 }
+    });
+}
+
+const canvas = document.getElementById("fireworks");
+if (canvas) {
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function random(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function drawFirework() {
+        const x = random(0, canvas.width);
+        const y = random(0, canvas.height);
+
+        for (let i = 0; i < 100; i++) {
+            ctx.beginPath();
+            ctx.arc(x, y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = `hsl(${random(0, 360)}, 100%, 60%)`;
+            ctx.fill();
+        }
+    }
+    setInterval(drawFirework, 100);
+}
+
+const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);

@@ -21,3 +21,6 @@ def gallery(request):
 
 def countdown(request):
     return render(request, 'wishes/countdown.html')
+
+def memories(request):
+    return render(request, 'wishes/memories.html')
