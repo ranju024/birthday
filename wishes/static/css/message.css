@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Mountains of Christmas", cursive;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Background */
+body {
+  color: #ffe6f0;
+}
+/* Backgrounds (ONLY difference) */
+body.bg-message-1 {
+  background: url("../images/f1.jpg") center / cover no-repeat fixed;
+}
+
+body.bg-message-2 {
+  background: url("../images/f2.jpg") center / cover no-repeat fixed;
+}
+
+body.bg-message-3 {
+  background: url("../images/dance.gif") center / cover no-repeat fixed;
+}
+
+/* Dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: -1;
+}
+
+/* Canvas */
+#hearts {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Layout */
+.content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+}
+
+.card {
+  max-width: 1100px;
+  width: 100%;
+  background: rgba(20, 10, 30, 0.55);
+  border-radius: 20px;
+  padding: 30px 26px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+}
+
+.text {
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(255, 120, 180, 0.7),
+    0 0 20px rgba(255, 120, 180, 0.4);
+}
+
+.highlight {
+  font-size: 1.6em;
+  margin-top: 20px;
+  text-align: center;
+  color: #ffd6ec;
+}
+
+/* Button */
+.next-btn {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background: linear-gradient(135deg, #ff7aa2, #ffd166);
+  color: #2a0f2d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.next-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6);
+}
+
+.next-btn:active {
+  transform: scale(0.95);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card {
+    padding: 22px 18px;
+  }
+}
+@media (max-width: 768px) {
+  /* body {
+    background-color: #1a0f2a;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+  } */
+  body.bg-message-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+      url("../images/f1.jpg");
+    background-color: #1a0f2a;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  body.bg-message-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+      url("../images/f2.jpg");
+    background-color: #1a0f2a;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  body.bg-message-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+      url("../images/dance.gif");
+    background-color: #1a0f2a;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}

@@ -4,17 +4,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'wishes/home.html')
 
-def messi(request):
-    return render(request, 'wishes/messi.html')
-
-def speed(request):
-    return render(request, 'wishes/speed.html')
-
 def message(request):
     return render(request, 'wishes/message.html')
-
-def why(request):
-    return render(request, 'wishes/why.html')
 
 def gallery(request):
     return render(request, 'wishes/gallery.html')
@@ -22,5 +13,14 @@ def gallery(request):
 def countdown(request):
     return render(request, 'wishes/countdown.html')
 
-def memories(request):
-    return render(request, 'wishes/memories.html')
+def gift(request):
+    return render(request, 'wishes/gift.html')
+
+def default(request):
+    return render(request, 'wishes/default.html')
+
+def message1(request):
+    return render(request, 'wishes/message1.html')
+
+def message2(request):
+    return render(request, 'wishes/message2.html')

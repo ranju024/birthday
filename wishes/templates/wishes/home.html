@@ -4,45 +4,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday🐐</title>
+    <title>Happy Birthday 🐒</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
   </head>
+
   <body>
-    <canvas id="fireworks">fireworks canvas</canvas>
-    <div class="container">
-      <div class="fade-in">
-        <h1 class="glow">Happy Birthday, Bandari🐐</h1>
-      </div><div>
-      <a href="{% url 'messi' %}" class="btn">Messi Mode</a>
-      <a href="{% url 'speed' %}" class="btn">Speed Mode</a>
-      <a href="{% url 'message' %}" class="btn">Real Message</a>
-      <a href="{% url 'gallery' %}" class="btn">Khudko dekhna chahoge kya😁</a>
-    </div>
-
-    <button id="music-btn" class="music-btn">🔊 Play Music</button>
-
+    <canvas id="bg-canvas"></canvas>
     <audio id="bg-music" loop>
-      <source src="{% static 'music/bday_tune.mp3' %}" type="audio/mpeg" />
+      <source
+        src="{% static 'music/bday_tune.mp3' %}"
+        preload="auto"
+        loop
+        type="audio/mpeg"
+      />
     </audio>
-    <footer>
-      <p style="opacity: 0.7; font-size: 14px">
-        Built with care. Not copy-pasted😒
-      </p>
-      <button class="fun-btn" onclick="fireConfetti()">
-        🎉 Celebrate Againn 🎉
-      </button>
-    </footer>
-    <script src="{% static 'js/main.js' %}"></script>
+    <main class="hero">
+      <div class="glass">
+        <h1 class="title glow">Happy Birthday<br />🎂</h1>
+
+        <div class="nav">
+          <a href="{% url 'message' %}" class="note">
+            <span class="note-front">🥹</span>
+            <span class="note-back">Read Me</span>
+          </a>
+
+          <a href="{% url 'message1' %}" class="note">
+            <span class="note-front">📩</span>
+            <span class="note-back">Continue</span>
+          </a>
+
+          <a href="{% url 'gallery' %}" class="note">
+            <span class="note-front">📸</span>
+            <span class="note-back">Don't you Dare</span>
+          </a>
+
+          <a href="{% url 'gift' %}" class="note">
+            <span class="note-front">🎁</span>
+            <span class="note-back">Gift</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Party popper -->
+    <div id="party-popper">🎉</div>
+    <div id="thought-bubble"></div>
+
+    <script src="{% static 'js/message-music.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script>
-      window.onload = () => {
-        fireConfetti();
-      };
-    </script>
+    <script src="{% static 'js/home.js' %}"></script>
   </body>
 </html>

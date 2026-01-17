@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final One</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/message.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/back_button.css' %}" />
+  </head>
+
+  <body class="bg-message-3">
+    <canvas id="hearts"></canvas>
+    <audio id="bg-music" loop>
+      <source
+        src="{% static 'music/msg3_music.mp3' %}"
+        preload="auto"
+        loop
+        type="audio/mpeg"
+      />
+    </audio>
+    <main class="content">
+      <div class="card">
+        <div id="text" class="text">
+          <p>
+            And finally…
+            <br /><br />I wish you a beautiful year Aasish. <br /><br />I hope
+            today feels lighter and you smile a little more than usual.
+            <br />
+            I hope you feel proud of how far you’ve come, even on the days you
+            don’t realize it. <br /><br />
+            Hope this year of your life turns out better. <br />
+            Hope my eyes won't see you suffering this year. <br />Hope you get
+            what you genuinely deserve.
+          </p>
+
+          <p class="highlight">
+            Happy Birthday, Aasish 🎉<br /><br />Thank you for being my anchor
+            in stormy seas. <br />
+          </p>
+          <p>And, <br />Always keep this in mind => <br /></p>
+          <p class="highlight">
+            Whether we talk or not, I will always be cheering for you, quietly,
+            honestly.
+          </p>
+        </div>
+      </div>
+    </main>
+    <a href="/home/" class="back-btn" aria-label="Go back">
+      <span class="back-arrow">←</span>
+      <span class="back-text">Back</span>
+    </a>
+    <script src="{% static 'js/message.js' %}"></script>
+    <script src="{% static 'js/message-music.js' %}"></script>
+  </body>
+</html>

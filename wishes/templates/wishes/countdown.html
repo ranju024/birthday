@@ -5,24 +5,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counting...</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/countdown.css' %}" />
   </head>
   <body>
-    <div class="container fade-in">
-      <h1>Something special is coming... 🎁</h1>
-      <h2 id="countdown">Loading... ⏳</h2>
-    </div>
+    <!-- 🎄 HERO -->
+    <section class="hero">
+      <h1 class="hero-title glow-pulse">Something Special Is Coming 🎁</h1>
 
-    <button id="music-btn" class="music-btn">🔊 Play Music</button>
+      <div id="countdown" class="countdown-text">Loading…</div>
+    </section>
+
+    <!-- 🎵 MUSIC -->
     <audio id="bg-music" loop>
-      <source src="{% static 'music/bday_tune.mp3' %}" type="audio/mpeg" />
+      <source src="{% static 'music/soothing.mp3' %}" type="audio/mpeg" />
     </audio>
-    <h2 id="countdown">Loading countdown… ⏳</h2>
-    <script src="{% static 'js/main.js' %}"></script>
+
+    <script src="{% static 'js/countdown.js' %}"></script>
   </body>
 </html>

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HBD Love ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/default.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/back_buttoncss' %}" />
+  </head>
+
+  <body>
+    <audio id="bg-music" autoplay loop>
+      <source src="{% static 'music/gitaud.mp3' %}" type="audio/mpeg" />
+    </audio>
+
+    <div id="main">
+      <div id="wrap">
+        <canvas id="canvas" width="1100" height="680"></canvas>
+
+        <div id="text">
+          <div id="code">
+            <span>My beautiful wife 💞</span><br />
+            <span>Happy Birthday 🎈</span><br />
+            <span>May Allah bless you 🍀</span><br />
+            <span>And give you many happiness 💕</span><br />
+            <span>I love you ❤️</span><br />
+            <span>Always & forever 🥺</span>
+          </div>
+        </div>
+
+        <div id="clock-box">
+          <span id="clock"></span>
+        </div>
+      </div>
+    </div>
+    <a href="/home/" class="back-btn" aria-label="Go back">
+      <span class="back-arrow">←</span>
+      <span class="back-text">Back</span>
+    </a>
+    <script src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/love.js' %}"></script>
+  </body>
+</html>

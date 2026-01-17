@@ -4,27 +4,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Message</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>One More Thing 💌</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/message.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/back_button.css' %}" />
   </head>
-  <body>
-    <div class="container">
-      <h2>This part is real.</h2>
-      <p>I don't always say this, but you genuinely matter to me.</p>
-      <p>You bring energy, laughterr, joy, and good vibes wherever you go.</p>
-      <p>
-        I built this instead of buying something... because you're worth real
-        effort.
-      </p>
-      <p>Happy Birthday. Always cheering for you⚽💙</p>
-      <a href="/home/">Back</a>
-    </div>
-    <img src="{% static 'images/enjoy_bday.gif' %}" class="gif" alt="Enjoy" />
-    <footer>
-      <!-- <p>Built with care. Not copy-pasted😒</p> -->
-      <p style="opacity: 0.7; font-size: 14px">
-        I didn't rush this. I didn't copy it. I made it - for you.
-      </p>
-    </footer>
+
+  <body class="bg-message-1">
+    <canvas id="hearts"></canvas>
+    <audio id="bg-music" loop>
+      <source src="{% static 'music/shauq1.m4a' %}" preload="auto"
+    loop type="audio/mpeg" />
+    </audio>
+    <main class="content">
+      <div class="card">
+        <div id="text" class="text">
+          <p>
+            Dear <em>Mr.Bhandari</em>, <br />Hope this finds you well.
+            <br /><br />
+            Time flies by <strong>SO QUICKLY. </strong> <br />20 years bitisako. <br /> Hijo bedma susu garne aasish aaja 21 years vaisako wow. <br />
+            😂<br><br><br>
+            Kata yo line padheko the...
+          </p>
+
+          <p class="highlight">
+            "Friendship is not about who you spend the most time with, it's
+            about who you have the  <em>*best time* </em>  with."
+          </p>
+          <p>
+            Aile aayera yo kura realize vako cha...<br />Chahera, nachahera,
+            jani, najani,<br />Tito, mitho, tarro, rasilo, beswadilo, guliyo, piro,
+            amilo, nunilo...<br/> jj huna sakcha tyo sab kuraharu vayeka chan
+            timisanga😒<br /><br />Tara hera na haami tei cham.
+            <br /><br />Timisanga jhagada vayesi, aba tyo kitaab nai banda
+            garchu vanchu but khai... feri tei paana paltauna man lagcha.
+            Jatipatak man mutaab vayeni tei phase mai gayera adkincha kura.
+            <br />
+
+            <br />Loop jasto you know. <br />But  I enjoy it,<strong> every single time.</strong> <br />
+            <br />
+            <p class="highlight">*Ranju Sharma* honta.</p>
+            <br /><br />Whateverrr <br /><br />
+            Baaki kura padhne vaye arko button khoja😌<br />
+          </p>
+        </div>
+      </div>
+    </main>
+    <a href="/home/" class="back-btn" aria-label="Go back">
+      <span class="back-arrow">←</span>
+      <span class="back-text">Back</span>
+    </a>
+    <script src="{% static 'js/message.js' %}"></script>
+    <script src="{% static 'js/message-music.js' %}"></script>
   </body>
 </html>

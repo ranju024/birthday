@@ -4,22 +4,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Awaaa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/back_button.css' %}" />
   </head>
+
   <body>
-    <div class="container">
-      <div class="reveal">
-        <h2>Best Memos 📸</h2>
-        <div class="grid">
-          <img src="{% static 'images/aasish1.jpg' %}" alt="sish1" />
-          <img src="{% static 'images/fucche.jpg' %}" alt="sish2" />
-          <img src="{% static 'images/huh.gif' %}" alt="huh" />
+    <div class="gallery-wrapper">
+      <h1 class="title">⚠️ WARNING: Too Much Handsomeness ⚠️</h1>
+
+      <div class="frame-container">
+        <div class="photo-frame active" data-sound="giggle">
+          <div
+            class="photo"
+            style="background-image: url('{% static 'images/bcb_hair.jpg' %}')"
+          ></div>
+          <p class="roast">That smile could cause traffic jams 😳</p>
+        </div>
+
+        <div class="photo-frame" data-sound="wow">
+          <div
+            class="photo"
+            style="background-image: url('{% static 'images/bcb_side.jpg' %}')"
+          ></div>
+          <p class="roast">Model vibes… budget unknown 😌</p>
+        </div>
+
+        <div class="photo-frame" data-sound="woo">
+          <div
+            class="photo"
+            style="background-image: url('{% static 'images/bcb_cutie.jpg' %}')"
+          ></div>
+          <p class="roast">Smile level: Illegal 😁🤣</p>
+        </div>
+
+        <div class="photo-frame" data-sound="waa">
+          <div
+            class="photo"
+            style="
+              background-image: url('{% static 'images/bcb_selfie.jpg' %}');
+            "
+          ></div>
+          <p class="roast">POV: Hearts stolen accidentally ❤️</p>
+        </div>
+
+        <div class="photo-frame" data-sound="laugh">
+          <div
+            class="photo"
+            style="background-image: url('{% static 'images/fucche.jpg' %}')"
+          ></div>
+          <p class="roast">Sir please calm down 😭</p>
         </div>
       </div>
+
+      <p class="hint">👆 Tap anywhere to start the fun</p>
     </div>
 
-    <a href="/home/">Back</a>
-    <script src="{% static 'js/main.js' %}"></script>
+    <!-- Sounds -->
+    <audio id="giggle" src="{% static 'music/giggle.mp3' %}"></audio>
+    <audio id="wow" src="{% static 'music/sigma.mp3' %}"></audio>
+    <audio id="woo" src="{% static 'music/wow.mp3' %}"></audio>
+    <audio id="waa" src="{% static 'music/cute.mp3' %}"></audio>
+    <audio id="laugh" src="{% static 'music/laugh.mp3' %}"></audio>
+    <a href="/home/" class="back-btn" aria-label="Go back">
+      <span class="back-arrow">←</span>
+      <span class="back-text">Back</span>
+    </a>
+    <script src="{% static 'js/gallery.js' %}"></script>
   </body>
 </html>

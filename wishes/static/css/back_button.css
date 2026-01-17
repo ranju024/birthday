@@ -1,0 +1,60 @@
+/* ===== BACK BUTTON ===== */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffe6f0;
+  text-decoration: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 120, 180, 0.35),
+    rgba(255, 180, 220, 0.25)
+  );
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 0 12px rgba(255, 120, 180, 0.6),
+    0 0 30px rgba(255, 120, 180, 0.35);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 160, 200, 0.9),
+    0 0 40px rgba(255, 160, 200, 0.5);
+}
+
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+.back-arrow {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.back-text {
+  white-space: nowrap;
+}
+
+/* Mobile refinement */
+@media (max-width: 480px) {
+  .back-btn {
+    top: 14px;
+    left: 14px;
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+}

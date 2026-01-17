@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One More Thing 💌</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/message.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/back_button.css' %}" />
+  </head>
+
+  <body class="bg-message-2">
+    <canvas id="hearts"></canvas>
+    <audio id="bg-music" loop>
+      <source
+        src="{% static 'music/Cigarettes_After_Sex.mp3' %}"
+        preload="auto"
+        loop
+        type="audio/mpeg"
+      />
+    </audio>
+    <main class="content">
+      <div class="card">
+        <div id="text" class="text">
+          <p>
+            So yeah… where were we?
+            <br /><br />
+            From <strong> that-cap-layera-aaune-guy </strong> to
+            <strong> chatbot </strong> to <strong>bot</strong> to
+            <strong> idc </strong> to <strong> sish </strong> to
+            <strong> aaisha </strong> to <strong> babe‑couldn’t‑be </strong> and
+            now to <em><strong> Candy’s candid </strong></em>. <br /><br />
+            It’s been… quite a journey.
+            <br /><br />
+            Not trying to be dramatic, but you and your thoughts have always
+            occupied some space in my mind.
+            <br /><br />
+            You just <strong>know me so well</strong>. Sometimes when even I
+            don’t understand myself, you somehow <strong>DO.</strong>
+            <br /><br />
+            <strong>Haha.</strong> <br /><br />And honestly…
+            <strong>that’s RARE.</strong>
+          </p>
+          <a href="/message2/" class="next-btn">One last thing</a>
+        </div>
+      </div>
+    </main>
+    <a href="/home/" class="back-btn" aria-label="Go back">
+      <span class="back-arrow">←</span>
+      <span class="back-text">Back</span>
+    </a>
+    <script src="{% static 'js/message.js' %}"></script>
+    <script src="{% static 'js/message-music.js' %}"></script>
+  </body>
+</html>

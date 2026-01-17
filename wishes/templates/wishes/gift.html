@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎁</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/gift.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/back_button.css' %}" />
+  </head>
+  <body>
+    <audio id="bg-music" loop>
+      <source
+        src="{% static 'music/guess_what_m_gay.mp3' %}"
+        preload="auto"
+        loop
+        type="audio/mpeg"
+      />
+    </audio>
+    <!-- Main Stage -->
+    <div id="stage">
+      <button id="giftBtn">Open your gift🎁</button>
+      <div id="countdown"></div>
+      <div id="finalText">Chaina kei gift sift 😏</div>
+      <div class="roast-text" id="roastText">Yei ho gift😌</div>
+    </div>
+
+    <!-- Fullscreen GIF layer -->
+    <div id="gifScreen">
+      <img src="{% static 'images/21bday.gif' %}" alt="Roast Gif" />
+    </div>
+    <a href="/home/" id="back-btn" class="back-btn">← Back</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="{% static 'js/gift.js' %}"></script>
+    <script src="{% static 'js/message-music.js' %}"></script>
+  </body>
+</html>
