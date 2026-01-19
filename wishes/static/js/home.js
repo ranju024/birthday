@@ -76,7 +76,7 @@ animate();
 
 /* ===== THOUGHT MESSAGES ===== */
 const thoughts = [
-    "Someone’s birthday deserved more just than a cake 😉",
+    "Someone’s birthday deserved more than just a cake 😉",
     "Dherai makkha parni haina😒",
     "Ghoster.",
     "Huh",
