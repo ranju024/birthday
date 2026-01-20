@@ -2,6 +2,7 @@
 function typeWriter(el, speed = 35) {
     const html = el.innerHTML;
     el.innerHTML = "";
+    el.style.visibility = "visible";
 
     let i = 0;
     let isTag = false;
@@ -27,8 +28,9 @@ function typeWriter(el, speed = 35) {
 }
 
 window.onload = () => {
-    const text = document.getElementById("text");
-    typeWriter(text, 35);
+    const el = document.getElementById("text");
+    el.style.visibility = "hidden";   // hide first
+    typeWriter(el, 35);
 };
 
 /* ===== HEARTS BACKGROUND ===== */

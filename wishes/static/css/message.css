@@ -73,7 +73,8 @@ body::before {
 .text {
   font-size: clamp(1.1rem, 3vw, 1.6rem);
   line-height: 1.6;
-  text-shadow: 0 0 10px rgba(255, 120, 180, 0.7),
+  text-shadow:
+    0 0 10px rgba(255, 120, 180, 0.7),
     0 0 20px rgba(255, 120, 180, 0.4);
 }
 
@@ -100,7 +101,9 @@ body::before {
   background: linear-gradient(135deg, #ff7aa2, #ffd166);
   color: #2a0f2d;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .next-btn:hover {
@@ -126,7 +129,8 @@ body::before {
     background-repeat: no-repeat;
   } */
   body.bg-message-1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
       url("../images/f1.jpg");
     background-color: #1a0f2a;
     background-size: contain;
@@ -135,7 +139,8 @@ body::before {
   }
 
   body.bg-message-2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
       url("../images/f2.jpg");
     background-color: #1a0f2a;
     background-size: contain;
@@ -144,11 +149,16 @@ body::before {
   }
 
   body.bg-message-3 {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)),
       url("../images/dance.gif");
     background-color: #1a0f2a;
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
   }
+}
+
+.text {
+  visibility: hidden;
 }
