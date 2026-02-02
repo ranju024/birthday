@@ -76,14 +76,14 @@ animate();
 
 /* ===== THOUGHT MESSAGES ===== */
 const thoughts = [
-    "Someone’s birthday deserved more than just a cake 😉",
-    "Dherai makkha parni haina😒",
-    "Ghoster.",
-    "Huh",
-    "Kattina😏",
-    "Anyway😊",
-    "Some things were made just for today 🎂🥳",
-    "Happy Birthday candy-crush"
+    "Welcome! Take your time exploring ✨",
+    "Designed to feel light, fun, and interactive 🙂",
+    "Sometimes small details make the experience better",
+    "Tap around and see what happens 👀",
+    "This site is just a creative experiment",
+    "Built for learning, testing, and fun 🚀",
+    "Every screen has something to discover",
+    "Thanks for stopping by 💛"
 ];
 
 const bubble = document.getElementById("thought-bubble");

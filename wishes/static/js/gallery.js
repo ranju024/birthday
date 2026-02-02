@@ -32,3 +32,13 @@ setInterval(() => {
     current = (current + 1) % frames.length;
     showFrame(current);
 }, 4000);
+
+
+document.querySelectorAll(".photo").forEach(photo => {
+    const bg = photo.dataset.bg;
+    if (bg) {
+        photo.style.backgroundImage = `url("${bg}")`;
+        photo.style.backgroundSize = "cover";
+        photo.style.backgroundPosition = "center";
+    }
+});
